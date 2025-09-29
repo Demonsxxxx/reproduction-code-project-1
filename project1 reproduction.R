@@ -76,11 +76,9 @@ tab <- data.frame(
   `Forecast TRUE mean`  = as.integer(round(res[,"mean_true"])),
   `TRUE 95% lo`         = as.integer(round(res[,"lo_true"])),
   `TRUE 95% hi`         = as.integer(round(res[,"hi_true"])),
-  `Forecast OBS mean`   = as.integer(round(res[,"mean_obs"])),
   `Prob(increase)`      = round(res[,"prob_inc"], 3),
   check.names = FALSE
 )
 print(tab, row.names = FALSE)
 
-# Tip: if you have metro-specific ΔZRI, pass a named vector and call:
-# res <- t(mapply(forecast_one_step, names(hud_counts), hud_counts, dZRI = DeltaZRI_by_metro))
+
